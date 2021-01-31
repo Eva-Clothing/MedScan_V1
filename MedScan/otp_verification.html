@@ -1,0 +1,77 @@
+<!DOCTYPE html >
+<html lang="en" style="height: 150vh;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="MS_StyleSheet.css">
+
+    <title>Document</title>
+</head>
+<body onload="onload()" style="height: 150vh;">
+
+
+    <nav class="logo-navbar">
+        <h1>Welcome Doctor :D</h1>
+    </nav>
+    
+        <div class="barcode-container" >
+    
+            <!-- <form action="MS_homePage.html" onsubmit="otpEntered()"> -->
+                <div class="barcode-img">
+           
+                    <img src="./Images/SVGs/undraw_verified_re_4io7.svg" height="600px" alt="">
+            </div>
+    
+            <div class="form">
+                <form  onsubmit="otpEntered()">
+                    
+                    <label for="otp_input"><b> Enter Phone Number : </b></label> <br>
+    
+                    <div class="form-inputs">
+                        <input type="text" id="phonenumber_input">
+
+                        <button type="button" class="submit-btn" id="sign-in-button" onclick="phoneAuth()">
+                                <img src="./Images/XD_SVGs/Submit_Arrow.svg" alt="">
+                        </button>
+
+                    </div>
+                    
+                    <div class="form-buttons">
+                        <a class="scan-btn">Scan Barcode</a>
+                        <a href="MSScan_new_profile.html">New Profile</a>
+                    </div>
+                    
+                    <div id="recaptcha-container" ></div>
+                </form>
+            </div>
+    
+        </div>
+   
+    
+   <!-- SCRIPTS -->
+
+            <!-- The core Firebase JS SDK is always required and must be listed first -->
+            <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+            <script defer src="https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-firestore.js"></script>
+            <script>
+              // Your web app's Firebase configuration
+              // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+              var firebaseConfig = {
+                apiKey: "AIzaSyBqrFVVPu_mFVBhnBKEC0At_9d8rFcuUWU",
+                authDomain: "medscan-test.firebaseapp.com",
+                projectId: "medscan-test",
+                storageBucket: "medscan-test.appspot.com",
+                messagingSenderId: "879181352822",
+                appId: "1:879181352822:web:17d9d9a2f0e24966453457",
+                measurementId: "G-SNSV5929L8"
+              };
+              // Initialize Firebase
+              firebase.initializeApp(firebaseConfig);
+            
+            </script>
+    
+<script src="./Scripts/otp_verification.js"></script>
+</body> 
+</html> 
+    
